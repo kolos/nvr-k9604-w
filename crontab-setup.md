@@ -20,6 +20,7 @@ wget "http://\$target_ip/log_camera?id=\$id&val=\$temp_c" -O /dev/null -T 1 > /d
 echo "\$now \$id \$temp_c" > /dev/kmsg
 EOF
 
+chmod +x /tmp/log_temp
 echo "*/5 * * * * /tmp/log_temp" > /tmp/cron/root
 crond -c /tmp/cron
 
